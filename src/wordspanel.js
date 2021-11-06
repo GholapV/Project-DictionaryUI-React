@@ -11,7 +11,7 @@ function WordsPanel() {
     const input = useContext(ContextAPI).input[0]
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/favorites')
+        axios.get('https://dictionary-server-04.herokuapp.com/api/v1/favorites')
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [data])
@@ -22,7 +22,7 @@ function WordsPanel() {
     }
 
     const onClickhandler = (id) => {
-        axios.delete(`http://localhost:5000/api/v1/favorites/${id}`)
+        axios.delete(`https://dictionary-server-04.herokuapp.com/api/v1/favorites/${id}`)
     }
 
     return (

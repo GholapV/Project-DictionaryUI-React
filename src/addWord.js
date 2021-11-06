@@ -8,8 +8,8 @@ function AddWord() {
     const [message, setMessage] = useContext(ContextAPI).message
 
     const onClickhandler = () => {
-        // axios.get(`https://dictionary-server-03.herokuapp.com/api/v1/dictionary/${inputvalue}`)
-        axios.get(`http://localhost:5000/api/v1/dictionary/${inputvalue}`)
+
+        axios.get(`https://dictionary-server-04.herokuapp.com/api/v1/dictionary/${inputvalue}`)
             .then((res) => {
                 const { msg } = res.data
                 if (msg === undefined) setMessage('Added')
